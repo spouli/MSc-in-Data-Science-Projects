@@ -1,0 +1,29 @@
+// Nodes
+
+LOAD CSV WITH HEADERS FROM "file:///Book.csv" AS row
+CREATE (:Book {ISBN: row.ISBN, title: row.title, publication_year: row.publication_year, language: row.language, price: row.price});
+CREATE CONSTRAINT FOR (book:Book) REQUIRE book.ISBN IS UNIQUE;
+
+LOAD CSV WITH HEADERS FROM "file:///Publisher.csv" AS row
+CREATE (:Publisher {ID: row.ID, name: row.name, headquarters: row.headquarters});
+
+LOAD CSV WITH HEADERS FROM "file:///Author.csv" AS row
+CREATE (:Author {ID: row.ID, name: row.full_name, gender: row.gender, nationality: row.nationality});
+
+LOAD CSV WITH HEADERS FROM "file:///User.csv" AS row
+CREATE (:User {username: row.username, email: row.email});
+CREATE CONSTRAINT FOR (user:User) REQUIRE user.username IS UNIQUE;
+
+// Edges
+
+LOAD CSV WITH HEADERS FROM "file:///Published.csv" AS row
+MATCH (b:Book { ISBN: row.ISBN}), (p:Publisher {ID: row.publisher_ID})
+CREATE (b)-[:Published]->(p);
+
+LOAD CSV WITH HEADERS FROM "file:///Authored.csv" AS row
+MATCH (a:Author { ID: row.author_ID}), (b:Book { ISBN: row.ISBN})
+CREATE (a)-[:Authored {author_order: row.author_order, role: row.role}]->(b);
+
+LOAD CSV WITH HEADERS FROM "file:///Ordered.csv" AS row
+MATCH (u:User { username: row.username}), (b:Book { ISBN: row.ISBN})
+CREATE (u)-[:Ordered {order_placement_timestamp: row.order_placement_timestamp, order_completion_timestamp: row.order_completion_timestamp, address: row.address}]->(b);

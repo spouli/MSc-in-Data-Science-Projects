@@ -1,0 +1,36 @@
+// Tasks
+
+You should deliver:
+a) A Cypher statement that counts all the books in your database.
+b) A Cypher statement that returns the IDs and the names of the authors with Greek
+nationality.
+c) A Cypher statement that will retrieve all properties of all Books that have an author
+named “John Doe”.
+d) A Cypher statement that will retrieve the names of all Authors who have authored
+Books that have been ordered by a user having the “shybear” username. 
+
+//
+
+a) A Cypher statement that counts all the books in your database:
+
+	MATCH (b:Book)
+	RETURN count(b)
+
+b) A Cypher statement that returns the IDs and the names of the authors with Greek nationality:
+
+	MATCH (a:Author)
+	WHERE a.nationality = "Greek"
+	RETURN a.ID, a.name
+
+c) A Cypher statement that will retrieve all properties of all Books that have an author named “John Doe”:
+	
+	MATCH (a:Author)-[:Authored]->(b:Book)
+	WHERE a.name = "John Doe"
+	RETURN b
+
+d) A Cypher statement that will retrieve the names of all Authors who have authored Books that have been ordered 
+by a user having the “shybear” username:
+
+	MATCH (a:Author)-[:Authored]->(b:Book)<-[:Ordered]-(u:User)
+	WHERE u.username = "shybear"
+	RETURN a.name

@@ -1,0 +1,154 @@
+******************************
+			 age
+******************************
+count    442.0
+mean      -0.0
+std        0.0
+min       -0.1
+25%       -0.0
+50%        0.0
+75%        0.0
+max        0.1
+Name: age, dtype: float64
+Null values for feature age: 0
+
+******************************
+			 sex
+******************************
+count    442.0
+mean       0.0
+std        0.0
+min       -0.0
+25%       -0.0
+50%       -0.0
+75%        0.1
+max        0.1
+Name: sex, dtype: float64
+Null values for feature sex: 0
+
+******************************
+			 bmi
+******************************
+count    442.0
+mean      -0.0
+std        0.0
+min       -0.1
+25%       -0.0
+50%       -0.0
+75%        0.0
+max        0.2
+Name: bmi, dtype: float64
+Null values for feature bmi: 0
+
+******************************
+			 bp
+******************************
+count    442.0
+mean       0.0
+std        0.0
+min       -0.1
+25%       -0.0
+50%       -0.0
+75%        0.0
+max        0.1
+Name: bp, dtype: float64
+Null values for feature bp: 0
+
+******************************
+			 s1
+******************************
+count    442.0
+mean      -0.0
+std        0.0
+min       -0.1
+25%       -0.0
+50%       -0.0
+75%        0.0
+max        0.2
+Name: s1, dtype: float64
+Null values for feature s1: 0
+
+******************************
+			 s2
+******************************
+count    442.0
+mean       0.0
+std        0.0
+min       -0.1
+25%       -0.0
+50%       -0.0
+75%        0.0
+max        0.2
+Name: s2, dtype: float64
+Null values for feature s2: 0
+
+******************************
+			 s3
+******************************
+count    442.0
+mean      -0.0
+std        0.0
+min       -0.1
+25%       -0.0
+50%       -0.0
+75%        0.0
+max        0.2
+Name: s3, dtype: float64
+Null values for feature s3: 0
+
+******************************
+			 s4
+******************************
+count    442.0
+mean       0.0
+std        0.0
+min       -0.1
+25%       -0.0
+50%       -0.0
+75%        0.0
+max        0.2
+Name: s4, dtype: float64
+Null values for feature s4: 0
+
+******************************
+			 s5
+******************************
+count    442.0
+mean      -0.0
+std        0.0
+min       -0.1
+25%       -0.0
+50%       -0.0
+75%        0.0
+max        0.1
+Name: s5, dtype: float64
+Null values for feature s5: 0
+
+******************************
+			 s6
+******************************
+count    442.0
+mean      -0.0
+std        0.0
+min       -0.1
+25%       -0.0
+50%       -0.0
+75%        0.0
+max        0.1
+Name: s6, dtype: float64
+Null values for feature s6: 0
+
+******************************
+			 target
+******************************
+count    442.0
+mean     152.1
+std       77.1
+min       25.0
+25%       87.0
+50%      140.5
+75%      211.5
+max      346.0
+Name: target, dtype: float64
+Null values for feature target: 0
+
